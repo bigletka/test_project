@@ -1,11 +1,12 @@
-from rest_framework import generics, filters, permissions, viewsets
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.parsers import MultiPartParser, FormParser
-from .models import Book, Review, Favourite
-from .serializers import (BookListSerializer, BookDetailSerializer,
-                          FavouriteSerializer, ReviewPerformSerializer)
+from rest_framework import filters, generics, permissions, viewsets
+from rest_framework.parsers import FormParser, MultiPartParser
+
 from .filters import BookFilter
+from .models import Book, Favourite, Review
 from .permissions import IsOwnerOrReadOnly
+from .serializers import (BookDetailSerializer, BookListSerializer,
+                          FavouriteSerializer, ReviewPerformSerializer)
 
 
 class BookListView(generics.ListAPIView):

@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import BookListView, BookDetailView, FavoriteViewSet, ReviewViewSet
 
+from .views import BookDetailView, BookListView, FavoriteViewSet, ReviewViewSet
 
 favorite_list = FavoriteViewSet.as_view({
     'get': 'list',

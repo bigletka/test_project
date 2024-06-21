@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+
 # Register your models here.
-from .models import Author, Genre, Book, Review, Favourite, User
+from .models import Author, Book, Favourite, Genre, Review, User
 
 
 @admin.register(Author)

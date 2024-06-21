@@ -1,8 +1,8 @@
-from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.contrib.auth.password_validation import validate_password
-from .models import Author, Genre, Book, Review, Favourite
+from rest_framework import serializers
 
+from .models import Author, Book, Favourite, Genre, Review
 
 User = get_user_model()
 
